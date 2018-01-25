@@ -1,0 +1,16 @@
+{
+  "name": "xstate-plantuml",
+  "version": "1.0.0",
+  "description": "Visualizer of xstate statecharts using plantuml and graphviz",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "main": "./index.js"
+  },
+  "bin": {
+    "xstate-plantuml": "./index.js"
+  },
+  "author": "Erik Mogensen <erik@mogensoft.net>",
+  "license": "MIT"
+}
