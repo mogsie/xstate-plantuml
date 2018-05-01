@@ -1,6 +1,17 @@
 #!/usr/bin/env node
 
-const machine = require(process.argv[2]);
+const moduleName = process.argv[2];
+const exportVariable = process.argv[3];
+
+if (!moduleName) {
+  console.log('Usage: xstate-plantuml <module> [<variable>]\n\n  xstate-plantuml ./on-off\n  xstate-plantuml ./stateMachines lightStates');
+  return;
+}
+
+let machine = require(moduleName);
+if (exportVariable) {
+  machine = machine[exportVariable];
+}
 
 let indentation = 0;
 
@@ -80,4 +91,3 @@ function endCompound(name) {
     echo(`}`);
   }
 }
-
